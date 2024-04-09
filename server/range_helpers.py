@@ -39,7 +39,7 @@ def save_range():
 def get_range():
     with open('range_data.pkl', 'rb') as fp:
         info = pickle.load(fp)
-        return(json.dumps(info))
+        return(info)
 
 def update_range(hand):
     with open('range_data.pkl', 'rb') as fp:
@@ -57,6 +57,6 @@ def update_range(hand):
 
 
 if __name__ == '__main__':
-    get_range()
+    save_range()
 
     
